@@ -46,43 +46,14 @@ def actualizar_precios(modelo, precio_actualizado):
       return True
    else:
       return False
-def menu():
-   while True:
-      print("~~menu principal~~")
-      print("1. stock de su marca ")
-      print("2. busca su precio ")
-      print("3. actualizar el precio ")
-      print("4. salir ")
-      opcion_menu = input("ingrese opcion")
-      if opcion_menu == "1":
-        Stok_marca(marca)
-      elif opcion_menu == "2":
-         p_min = int(input("seleccione su rango minimo de precio"))
-         p_max = int(input("seleccione su rango maximo de precio"))
-         busqueda_precio (p_min, p_max)
-      elif opcion_menu == "3":
-         while True:
-            modelo = input("ingrese el nuevo valor que desaea actualizar. ").strip
-            if modelo in stok:
-               try:
-                  precio_actualizado = int(input("ingrese un nuevo precio para el equipo que desea"))
-                  if actualizar_precios(modelo, actualizar_precios):
-                   print("precio actualizado")
-                  else:
-                     print("error de precio")
-               except ValueError:
-                  print("ingrese un precio valido")
-            else:
-               print("el modelo no se encuentra ")
-               continuar = input("desea actualizar el precio? (Y OR N)")
-               if continuar != "n":
-                break
-      elif opcion_menu == "4":
-         print("fin del programa")
-         break
-      else:
-         print("debe seleccionar una oppcion del programa")
+
 menu()
+                
+
+
+
+
+
                 
 
 
